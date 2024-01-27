@@ -1,0 +1,75 @@
+<style>
+  .nav-link.dropdown-toggle::after {
+    display: none;
+  }
+
+  .nav-item {
+    padding: 10px 16px;
+    height: max-content;
+  }
+
+  .nav-item:active {
+    border-radius: 5px;
+    background: #FF7900;
+  }
+
+  .nav-item:active .nav-link {
+    color: #FFF;
+  }
+
+  .nav-link {
+    padding: 0 !important;
+  }
+
+  .navbar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+</style>
+<nav class="navbar navbar-expand-lg container">
+  <a href="<%- url_for_lang() %>" class="navbar-brand">
+    <% if (config.logo) { %>
+    <img src="<%- url_for(config.logo) %>" width="304" height="60">
+    <% } %>
+  </a>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+      <% for (const {children, name, url} of config.menus) { %>
+      <% if(children) { %>
+      <li class="nav-item dropdown">
+        <span class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          <%- __(name) %>
+        </span>
+        <div class="dropdown-menu">
+          <% for(const {url, name} of children){ %>
+          <a class="dropdown-item" href="<%- url_for_lang(url)%>">
+            <span><%- __(name) %></span>
+          </a>
+          <% } %>
+        </div>
+      </li>
+      <% } else { %>
+      <li class="nav-item">
+        <a class="nav-link" href="<%- url_for_lang(url) %>">
+          <%- __(name) %>
+        </a>
+      </li>
+      <% } %>
+      <% } %>
+      <li class="nav-item">
+        <label class="nav-link lang-select-wrap">
+          <i class="fa fa-globe"></i>
+          <span><%= lang_name(page.lang) %></span>
+          <select id="lang-select" data-canonical="<%= page.canonical_path %>">
+            <% for (const lang of theme.languages) { %>
+            <option value="<%= lang %>" <%= page.lang == lang ? 'selected' : '' %>>
+              <%= lang_name(lang) %>
+            </option>
+            <% } %>
+          </select>
+        </label>
+      </li>
+    </ul>
+  </div>
+</nav>

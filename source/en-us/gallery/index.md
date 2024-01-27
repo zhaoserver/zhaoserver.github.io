@@ -1,0 +1,48 @@
+---
+title: Gallery
+layout: gallery
+banners:
+  - cover: medias/courses/0.jpg
+  - cover: medias/courses/1.jpg
+  - cover: medias/courses/2.jpg
+images:
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+  - medias/courses/0.jpg
+  - medias/courses/1.jpg
+  - medias/courses/2.jpg
+---

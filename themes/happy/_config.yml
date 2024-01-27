@@ -1,0 +1,15 @@
+languages:
+  - en-us
+  - zh-cn
+css:
+  main: /css/main.css
+libs:
+  css:
+    animate: /libs/animate/animate.min.css
+    awesome: /libs/awesome/css/all.min.css
+    bootstrap: /libs/bootstrap/css/bootstrap.min.css
+  js: 
+    jquery: /libs/jquery/jquery-3.6.0.min.js
+    lodash: /libs/lodash/lodash-4.17.21.min.js
+    bootstrap: /libs/bootstrap/js/bootstrap.min.js
+    i18n: /js/i18n.js

@@ -1,0 +1,62 @@
+<%
+    // final page title.
+    const title = page.title ? page.title + ' | ' + config.title : config.title;
+
+    // keywords.
+    const keywords = page.keywords ?? config.keywords ?? title;
+
+    // description.
+    let description = page.summary ?? page.description ?? config.description ?? title;
+    if (!description && page.hasOwnProperty('__post') && page.__post) {
+        description = strip_html(page.content).substring(0, 120);
+    }
+
+    let iconType = 'image/png'
+    let faviconExt = config.favicon.substr(config.favicon.lastIndexOf('.') + 1, config.favicon.length)
+    if (faviconExt === 'png') {
+        iconType = 'image/png'
+    } else if (faviconExt === 'svg') {
+        iconType = 'image/svg+xml'
+    } else if (faviconExt === 'gif') {
+        iconType = 'image/gif'
+    } else if (faviconExt === 'jpeg') {
+        iconType = 'image/jpeg'
+    } else if (faviconExt === 'jpg') {
+        iconType = 'image/jpeg'
+    } else if (faviconExt === 'ico') {
+        iconType = 'image/x-icon, image/vnd.microsoft.icon'
+    }
+%>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="<%= keywords %>">
+    <meta name="description" content="<%= description %>">
+    <link rel="canonical" href="<%= url %>">
+    <% for ( const lang of theme.languages ) { %>
+    <link rel="alternative" hreflang="<%= lang %>" href="<%= canonical_url(lang) %>">
+    <% } %>
+    <!-- {% if page.layout == 'page' or page.layout == 'index' %}
+    {% for lang, value in site.data.languages %}
+    <link rel="alternative" hreflang="{{ lang }}" href="{{ canonical_url(lang) }}">
+    {% endfor %}
+    {% endif %} -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <title><%= title %></title>
+    <link rel="icon" type="<%= iconType %>" href="<%- url_for(config.favicon) %>">
+    <%- partial('_partial/style') %>
+
+    <script src="<%- url_for(theme.libs.js.jquery) %>"></script>
+    <script src="<%- url_for(theme.libs.js.lodash) %>"></script>
+    <script src="<%- url_for(theme.libs.js.bootstrap) %>"></script>
+    <script src="<%- url_for(theme.libs.js.i18n) %>"></script>
+
+    <%- partial('_partial/analytics') %>
+</head>

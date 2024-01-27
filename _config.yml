@@ -1,0 +1,42 @@
+title: Happy Kids
+subtitle: ''
+description: ''
+keywords:
+author: GP
+timezone: Asia/Shanghai
+language: :lang
+
+url: https://happykidsedu.com
+permalink: :title/
+default_layout: normal
+pretty_urls:
+  trailing_index: true
+  trailing_html: true 
+
+theme: happy
+logo: medias/logo.png
+favicon: medias/favicon.png
+email: happykidsrobotics@gmail.com
+analytics: G-KF8YWG23XX
+menus:
+  - name: Index
+    url: /
+  - name: Courses
+    url: /courses
+    children:
+      - name: Robotics
+        url: /courses/robotics
+      - name: Coding
+        url: /courses/coding
+      - name: Digital
+        url: /courses/digital
+      - name: Mentorship
+        url: /courses/mentorship
+  - name: Gallery
+    url: /gallery
+  - name: About
+    url: /about
+  - name: News
+    url: /news
+  - name: Contact
+    url: /contact

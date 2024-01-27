@@ -1,0 +1,76 @@
+<style>
+  .list {
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .column {
+    gap: 10px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cover {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .modal-dialog {
+    max-width: 800px;
+  }
+
+  .modal-content img {
+    width: 100%;
+  }
+</style>
+<%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
+<div class="container mt30">
+  <ul class="list">
+    <li class="column"></li>
+    <li class="column"></li>
+    <li class="column"></li>
+    <li class="column"></li>
+  </ul>
+</div>
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img src="" alt="Preview Image" id="previewImage">
+      </div>
+    </div>
+  </div>
+</div>
+<% const images = page.images.map((item) => `<img class="cover" src="${url_for(item)}" alt="${item}">`) %>
+<script type="">
+  $(function () {
+    var images = <%- stringify(images) %>;
+    var columnHeights = [0, 0, 0, 0];
+    function updateColumnHeights() {
+      var columns = $('.column');
+      columns.each(function (index) {
+        columnHeights[index] = $(this).height();
+      });
+      console.log(columnHeights);
+    }
+    function findShortestColumn() {
+      var shortestHeight = Math.min.apply(null, columnHeights);
+      return columnHeights.indexOf(shortestHeight);
+    }
+    $.each(images, function (k, img) {
+      var shortestColumnIndex = findShortestColumn();
+      $('.column').eq(shortestColumnIndex).append(img);
+      updateColumnHeights();
+    });
+    $('.cover').click(function () {
+      var src = $(this).attr('src');
+      console.log(src)
+      $('#previewImage').attr('src', src);
+      $('#modal').modal('show');
+    });
+  });
+</script>
