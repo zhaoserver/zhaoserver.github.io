@@ -1,0 +1,190 @@
+<style>
+  .title {
+    color: #5D5D5D;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.38px;
+  }
+
+  .description {
+    margin-top: 25px;
+    color: #989898;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .courses {
+    padding: 0;
+    list-style: none;
+    margin-top: 50px;
+    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .course-item {
+    width: 391px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #FFF;
+    border: 1px solid #CACACA;
+  }
+
+  .course-item:hover {
+    border-color: #5CCAFF;
+  }
+
+  .course-item>a {
+    text-decoration: none;
+  }
+
+  .course-top {
+    position: relative;
+    height: 258px;
+  }
+
+  .course-cover {
+    width: 391px;
+    height: 258px;
+  }
+
+  .course-labels {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .course-label {
+    padding: 0 11px;
+    line-height: 23px;
+    background-color: #FFE500;
+    color: #505050;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .course-info {
+    padding: 17px 28px 0 38px;
+  }
+
+  .course-title {
+    color: #505050;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .course-teacher {
+    margin: 0;
+    color: #3BCAE9;
+    font-family: "Inria Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .course-desc {
+    color: #989898;
+    font-family: "Inria Sans";
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .course-score {
+    height: 25px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .course-score-text {
+    color: #505050;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .course-score-star {
+    gap: 4px;
+    display: flex;
+    font-size: 15px;
+    color: #FF7900;
+  }
+
+  .course-students {
+    color: #959595;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .course-price {
+    margin-top: 6px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    color: #505050;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+  }
+
+  .course-price>del {
+    color: #959595;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+</style>
+<%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
+<main class="container mt30">
+  <h3 class="title"><%= page.title %></h3>
+  <section class="description">
+    <%- page.content %>
+  </section>
+  <ul class="courses">
+    <% pages_auto_filter().forEach((course) => { %>
+    <li class="course-item">
+      <a href="<%= url_for(course.path) %>">
+        <div class="course-top">
+          <img class="course-cover" src="<%= url_for(course.cover) %>" alt="<%= course.title %>">
+          <% if (course.labels) { %>
+          <div class="course-labels">
+            <% course.labels.forEach((label) => { %>
+            <span class="course-label"><%= label %></span>
+            <% }) %>
+          </div>
+          <% } %>
+        </div>
+        <div class="course-info">
+          <h4 class="course-title"><%= course.name %></h4>
+          <h5 class="course-teacher"><%= course.teacher %></h5>
+          <p class="course-desc"> <%= course.description %> </p>
+          <div class="course-score">
+            <span class="course-score-text"><%= course.score.toFixed(1) %></span>
+            <span class="course-score-star">
+              <% for (let i = 1; i <= course.score; ++i) { %>
+              <i class="fa-solid fa-star"></i>
+              <% } %>
+              <% for (let i = 0; i < 5-course.score; ++i) { %>
+              <i class="fa-regular fa-star"></i>
+              <% } %>
+            </span>
+            <span class="course-students">(<%= course.students %>)</span>
+          </div>
+          <div class="course-price">
+            <span>$<%= course.price %></span>
+            <del>$<%= course.originalPrice %></del>
+          </div>
+        </div>
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+</main>

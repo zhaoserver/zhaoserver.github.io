@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wave Animation</title>
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .wave {
+      width: 100%;
+      height: 100px;
+      background-color: #64b5f6;
+      clip-path: path('M 0 100 Q 80 0 260 80 Q 390 126 500 66 Q 650 0 780 40 C 930 80 960 90 1060 90 C 1280 90 1300 0 1440 0 L 1440 100');
+      /* M 0 100 Q 40 40 130 80 Q 260 130 330 60 Q 410 0 510 50 C 570 100 630 100 660 90 C 730 50 720 30 800 0 A 50 50 0 1 1 700 300 */
+    }
+
+    @keyframes waveAnimation {
+      0% {
+        transform: translateY(0) scaleY(1);
+      }
+
+      100% {
+        transform: translateY(-20px) scaleY(1.2);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wave"></div>
+
+</body>
+
+</html>

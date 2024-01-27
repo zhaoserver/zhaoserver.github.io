@@ -1,0 +1,69 @@
+title: Happy Kids
+subtitle: ''
+description: ''
+keywords:
+author: GP
+timezone: Asia/Shanghai
+language: :lang
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: zhaoserver.github.io
+permalink: :title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+default_layout: normal
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+default_category: course
+meta_generator: true
+theme: happy
+
+menus:
+  - name: Index
+    url: /
+  - name: Courses
+    url: /courses
+    children:
+      - name: Robotics
+        url: /courses/robotics
+      - name: Coding
+        url: /courses/coding
+      - name: Digital
+        url: /courses/digital
+      - name: Mentorship
+        url: /courses/mentorship
+  - name: Gallery
+    url: /gallery
+  - name: About
+    url: /about
+  - name: News
+    url: /news
+  - name: Contact
+    url: /contact
+
+deploy:
+  type: ''

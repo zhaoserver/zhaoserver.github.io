@@ -1,0 +1,96 @@
+<style>
+  .title {
+    color: #5D5D5D;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.20;
+    letter-spacing: 0.38px;
+  }
+
+  .courses {
+    margin-top: 60px;
+    padding: 0;
+    gap: 28px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .course-item {
+    width: 531px;
+    height: 258px;
+    list-style: none;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid #CACACA;
+    background: #FFF;
+  }
+
+  .course-item:hover {
+    border: 2px solid #5CCAFF;
+    border-left-width: 9px;
+  }
+
+  .course-item a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 26px;
+    text-decoration: none;
+  }
+
+  .course-cover {
+    flex: 1;
+    width: 0;
+    object-fit: cover;
+  }
+
+  .course-content {
+    flex: 0 0 350px;
+    padding-top: 49px;
+  }
+
+  .course-title {
+    margin: 0;
+    height: 65px;
+    color: #15B1FA;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.30;
+  }
+
+  .course-entries {
+    padding-left: 28px;
+    list-style: outside;
+  }
+
+  .course-entry {
+    color: #8E8E8E;
+    font-family: "Inria Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+</style>
+<%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
+<main class="container mt30">
+  <h3 class="title"><%- site.title %></h3>
+  <ul class="courses">
+    <% pages_auto_filter().forEach(course => { %>
+    <li class="course-item">
+      <a href="<%- url_for(course.path) %>">
+        <img class="course-cover" src="<%- url_for(course.cover) %>" alt="<%- course.title %>">
+        <div class="course-content">
+          <h4 class="course-title"><%- course.title %></h4>
+          <ul class="course-entries">
+            <% course.entries.forEach(entry => { %>
+            <li class="course-entry"><%- entry %></li>
+            <% }) %>
+          </ul>
+        </div>
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+</main>

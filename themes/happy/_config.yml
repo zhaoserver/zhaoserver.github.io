@@ -1,0 +1,37 @@
+logo: medias/logo.png
+favicon: favicon.png
+email: happykidsrobotics@gmail.com
+css:
+  main: /css/main.css
+libs:
+  css:
+    animate: /libs/animate/animate.min.css
+    awesome: /libs/awesome/css/all.min.css
+    bootstrap: /libs/bootstrap/css/bootstrap.min.css
+  js: 
+    jquery: /libs/jquery/jquery-3.6.0.min.js
+    lodash: /libs/lodash/lodash-4.17.21.min.js
+    bootstrap: /libs/bootstrap/js/bootstrap.min.js
+
+menus:
+  - name: Index
+    url: /
+  - name: Courses
+    url: /courses
+    children:
+      - name: Robotics
+        url: /courses/robotics
+      - name: Coding
+        url: /courses/coding
+      - name: Digital
+        url: /courses/digital
+      - name: Mentorship
+        url: /courses/mentorship
+  - name: Gallery
+    url: /gallery
+  - name: About
+    url: /about
+  - name: News
+    url: /news
+  - name: Contact
+    url: /contact
