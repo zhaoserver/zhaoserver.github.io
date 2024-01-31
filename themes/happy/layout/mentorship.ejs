@@ -69,14 +69,14 @@ const teachers = site.pages.data.filter(({type}) => type==page.filter)
     list-style-type: disc;
   }
 </style>
-<%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
-<main class="container  mt30">
-  <h3 class="title"><%= page.title %></h3>
+<main class="container">
+  <%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
+  <h3 class="title mt30"><%= page.title %></h3>
   <section class="description">
     <%- page.content %>
   </section>
   <ul class="teachers">
-    <% teachers.forEach(teacher => { %>
+    <% pages_auto_filter().forEach(teacher => { %>
     <li class="teacher-item">
       <img class="teacher-cover" src="<%- url_for(teacher.cover) %>" alt="<%= teacher.name %>">
       <div class="teacher-info">

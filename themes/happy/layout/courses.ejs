@@ -25,8 +25,8 @@
   }
 
   .course-item {
-    width: 391px;
-    height: 500px;
+    flex: 1 1 33%;
+    /* height: 500px; */
     overflow: hidden;
     border-radius: 6px;
     background-color: #FFF;
@@ -43,12 +43,12 @@
 
   .course-top {
     position: relative;
-    height: 258px;
+    /* height: 258px; */
   }
 
   .course-cover {
-    width: 391px;
-    height: 258px;
+    width: 100%;
+    height: auto;
   }
 
   .course-labels {
@@ -69,7 +69,7 @@
   }
 
   .course-info {
-    padding: 17px 28px 0 38px;
+    padding: 17px 28px 32px 38px;
   }
 
   .course-title {
@@ -141,16 +141,23 @@
     font-weight: 500;
     line-height: 1.3;
   }
+
+  .line {
+    display: inline-block;
+    font-size: 18px;
+    transform: translateY(-2px);
+  }
 </style>
-<%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
-<main class="container mt30">
-  <h3 class="title"><%= page.title %></h3>
+
+<main class="container">
+  <%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
+  <h3 class="title mt30"><%= page.title %></h3>
   <section class="description">
     <%- page.content %>
   </section>
   <ul class="courses">
     <% pages_auto_filter().forEach((course) => { %>
-    <li class="course-item">
+    <li class="course-item zoom">
       <a href="<%= url_for(course.path) %>">
         <div class="course-top">
           <img class="course-cover" src="<%= url_for(course.cover) %>" alt="<%= course.title %>">
@@ -164,22 +171,26 @@
         </div>
         <div class="course-info">
           <h4 class="course-title"><%= course.name %></h4>
+          <% if (course.teacher) { %>
           <h5 class="course-teacher"><%= course.teacher %></h5>
+          <% } %>
           <p class="course-desc"> <%= course.description %> </p>
           <div class="course-score">
             <span class="course-score-text"><%= course.score.toFixed(1) %></span>
+            <% const score = Math.round(course.score) %>
             <span class="course-score-star">
-              <% for (let i = 1; i <= course.score; ++i) { %>
+              <% for (let i = 1; i <= score; ++i) { %>
               <i class="fa-solid fa-star"></i>
               <% } %>
-              <% for (let i = 0; i < 5-course.score; ++i) { %>
+              <% for (let i = 0; i < 5 - score; ++i) { %>
               <i class="fa-regular fa-star"></i>
               <% } %>
             </span>
             <span class="course-students">(<%= course.students %>)</span>
           </div>
           <div class="course-price">
-            <span>$<%= course.price %></span>
+            <span>$<%= course.price %><%if (course.unit) {%> <span class="line">/</span> <%= course.unit %>
+              <% } %></span>
             <del>$<%= course.originalPrice %></del>
           </div>
         </div>

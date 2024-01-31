@@ -3,16 +3,13 @@ title: contact
 type: contact
 layout: normal
 banners:
-  - cover: medias/courses/0.jpg
-  - cover: medias/courses/1.jpg
-  - cover: medias/courses/2.jpg
+  - cover: medias/contact/banner/0.png
 ---
 
 ## Address
 
-Body Text
-
-Body Text
+1311 S Grand Ave,
+Suite 170, Glendora, CA
 
 ## E-mail
 

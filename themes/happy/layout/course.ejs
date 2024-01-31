@@ -12,7 +12,6 @@
   .main {
     gap: 22px;
     display: flex;
-    padding-bottom: 30px;
   }
 
   .content {
@@ -34,8 +33,8 @@
   }
 
   .cover {
-    width: 400px;
-    height: 224px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     background: #D9D9D9;
   }
@@ -108,9 +107,9 @@
     }
   }
 </style>
-<%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
-<main class="container mt30">
-  <h3 class="title"><%= page.title %></h3>
+<main class="container">
+  <%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
+  <h3 class="title mt30"><%= page.title %></h3>
   <section class="main">
     <div class="content">
       <%- page.content %>

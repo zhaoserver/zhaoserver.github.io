@@ -3,6 +3,9 @@ languages:
   - zh-cn
 css:
   main: /css/main.css
+js:
+  main: /js/main.js
+  i18n: /js/i18n.js
 libs:
   css:
     animate: /libs/animate/animate.min.css
@@ -12,4 +15,3 @@ libs:
     jquery: /libs/jquery/jquery-3.6.0.min.js
     lodash: /libs/lodash/lodash-4.17.21.min.js
     bootstrap: /libs/bootstrap/js/bootstrap.min.js
-    i18n: /js/i18n.js

@@ -1,0 +1,3 @@
+<% const redirect = page.redirect_path ?? config.default_language + '/' + page.path %>
+<% const layout = page.redirect_layout ?? 'index' %>
+<%- partial(layout, {page: site.pages.data.find(i => i.path == redirect) }) %>

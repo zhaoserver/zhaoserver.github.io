@@ -28,9 +28,9 @@
     color: #9d9d9d;
   }
 </style>
-<%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
-<div class="container mt30">
-  <ul class="news">
+<div class="container">
+  <%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
+  <ul class="news mt30">
     <% pages_auto_filter().forEach(({title, path, date}) => { %>
     <li class="news-item">
       <a href="<%- url_for(path) %>" class="news-link">

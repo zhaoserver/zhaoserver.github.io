@@ -5,6 +5,7 @@ keywords:
 author: GP
 timezone: Asia/Shanghai
 language: :lang
+default_language: en-us
 
 url: https://happykidsedu.com
 permalink: :title/

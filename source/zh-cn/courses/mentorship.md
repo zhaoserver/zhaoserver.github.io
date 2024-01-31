@@ -1,18 +1,19 @@
 ---
+sort: 4
 title: Mentorship
 type: courses
 filter: teacher
 layout: mentorship
-cover: medias/courses/cover.jpg
+cover: medias/courses/mentorship.png
 entries:
-  - body text body text body text body text body text body text body text body text body text body text body text 
-  - body text body text body text body text body text 
+  - Team of experienced educators
+  - Targeted learning approach
+  - Personalized guidance for individual academic goals
+  - Clear STEM specialization planning
 banners:
-  - cover: medias/courses/0.jpg
-  - cover: medias/courses/1.jpg
-  - cover: medias/courses/2.jpg
+  - cover: medias/teacher//banner/0.png
 ---
 
-Body Text 
+Body Text
 
 Body Text

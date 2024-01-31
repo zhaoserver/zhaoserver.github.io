@@ -27,9 +27,9 @@
     width: 100%;
   }
 </style>
-<%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
-<div class="container mt30">
-  <ul class="list">
+<div class="container">
+  <%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
+  <ul class="list mt30">
     <li class="column"></li>
     <li class="column"></li>
     <li class="column"></li>
@@ -45,7 +45,7 @@
     </div>
   </div>
 </div>
-<% const images = page.images.map((item) => `<img class="cover" src="${url_for(item)}" alt="${item}">`) %>
+<% const images = (page.images??[]).map((item) => `<img class="cover" src="${url_for(item)}" alt="${item}">`) %>
 <script type="">
   $(function () {
     var images = <%- stringify(images) %>;

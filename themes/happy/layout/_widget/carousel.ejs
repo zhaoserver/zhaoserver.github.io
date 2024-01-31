@@ -17,7 +17,7 @@
   }
 
   .carousel-item {
-    height: 591px;
+    /* height: 591px; */
     background-color: #ccc;
   }
 
@@ -57,7 +57,7 @@
     z-index: 20;
   }
 </style>
-
+<% locals.wave = false; %>
 <% if (list && list.length) { %>
 <div id="<%= id %>" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators<%= locals.wave ? ' carousel-indicators-wave' : ''%>">
@@ -80,7 +80,7 @@
     <% first = false; } %>
   </div>
   <%if (locals.wave) {%>
-  <img class="wave" src="<%= url_for('medias/svg/wave.svg') %>" alt="wave">
+  <!-- <img class="wave" src="<%= url_for('medias/svg/wave.svg') %>" alt="wave"> -->
   <% } %>
 </div>
 <% } %>

@@ -14,6 +14,7 @@
     gap: 28px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .course-item {
@@ -73,12 +74,12 @@
     line-height: 1.3;
   }
 </style>
-<%- partial('_widget/carousel', {id: 'carousel', list: page.banners, wave: true}) %>
-<main class="container mt30">
+<main class="container">
+  <%- partial('_widget/carousel', {id: 'carousel', list: page.banners, wave: true}) %>
   <h3 class="title"><%- site.title %></h3>
   <ul class="courses">
     <% pages_auto_filter().forEach(course => { %>
-    <li class="course-item">
+    <li class="course-item zoom">
       <a href="<%- url_for(course.path) %>">
         <img class="course-cover" src="<%- url_for(course.cover) %>" alt="<%- course.title %>">
         <div class="course-content">

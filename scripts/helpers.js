@@ -13,7 +13,8 @@ hexo.extend.helper.register('pages_auto_filter', function (path) {
   const { data } = site.pages
   const { lang: l, filter } = page
   const lang = (!l || l.startsWith(':')) ? defaultLang : l;
-  return data.filter(({ type, path }) => type == filter && path.startsWith(lang))
+  const pages = data.filter(({ type, path }) => type == filter && path.startsWith(lang))
+  return pages.sort((a, b) => a.sort - b.sort)
 });
 
 hexo.extend.helper.register('stringify', function (data) {
