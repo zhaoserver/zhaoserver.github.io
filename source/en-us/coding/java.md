@@ -1,7 +1,7 @@
 ---
 sort: 4
-name: Java Course
-title: Advanced Course
+name: Java
+title: Java
 type: coding
 layout: course
 cover: medias/coding/java/cover.png
@@ -13,7 +13,7 @@ time: 120
 unit: hr
 price: 45.00
 originalPrice: 79.99
-description: Gain a deep understanding of fundamental programming principles
+description: Industry level programming - Data Structure and Object Oriented Programming
 labels:
 banners:
   - cover: medias/coding/python/java/0.png
@@ -22,24 +22,16 @@ banners:
 
 ### What you can expect to learn
 
-Fully prepare for the VEX VRC Robotics Competition, delve into advanced mechanical principles and programming design, while concurrently enhancing your background in STEM disciplines.
+Embark on an exciting coding journey with our specially tailored Java Programming Course, designed specifically for middle school students and beyond. Explore the core principles of Java programming, utilizing it to unravel the structure and interpretation of computer programs. Immerse yourself in the intricacies of Java, fostering a genuine passion for coding and technology through hands-on, interactive experiences. This meticulously crafted program provides practical insights, encourages collaborative coding projects, and equips participants with essential programming skills. It establishes a strong foundation for ongoing exploration and success in the dynamic fields of computer science and STEM.
 
-**Instructor:** Mr. Sean
+**Age**: High School
 
-**Time:**
+**Prerequisites**: None
 
-**Instructor:**
+**Level**: Hard
 
-**Focus:**
+**Time**: 2h/Week
 
-**Required education:**
+**Price**: $40.00/Hour
 
-**Requirements:**
-
-**Suggested Materials:**
-
-**Price:** $1100.00/Month
-
-**Suggested Software:**
-
-**Location:**
+**Location**: Remote/In Person

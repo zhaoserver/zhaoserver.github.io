@@ -1,7 +1,7 @@
 ---
 sort: 2
 name: MIT App Inventor
-title: Advanced Course
+title: MIT App Inventor
 type: coding
 layout: course
 cover: medias/coding/mit/cover.png
@@ -9,11 +9,10 @@ cover: medias/coding/mit/cover.png
 # teacher: Mr.Sean
 score: 4.8
 students: 49
-time: 120
 unit: hr
 price: 35.00
 originalPrice: 54.99
-description: Use MIT App Inventor to create Android applications
+description: Let's create some Android applications with MIT App Inventor!
 labels:
 banners:
   - cover: medias/coding/mit/banner/0.png
@@ -22,24 +21,16 @@ banners:
 
 ### What you can expect to learn
 
-Fully prepare for the VEX VRC Robotics Competition, delve into advanced mechanical principles and programming design, while concurrently enhancing your background in STEM disciplines.
+Explore the exciting world of Android app development with our MIT App Inventor Course, tailored for learners of all ages. Dive into the fundamentals of creating mobile applications without the need for complex coding, allowing you to design and build your own Android apps. Delve into the unique features of MIT App Inventor, fostering a genuine passion for mobile app development and technology through hands-on, interactive experiences. This meticulously crafted program provides practical insights, encourages collaborative app projects, and equips you with essential app development skills, establishing a strong foundation for continued exploration and success in the dynamic realm of programming and STEM.
 
-**Instructor:** Mr. Sean
+**Age:** Any
 
-**Time:**
+**Requirements:** None
 
-**Instructor:**
+**Level:** Easy - Medium
 
-**Focus:**
+**Time:** 2h/Week
 
-**Required education:**
+**Price:** $30.00/Hour
 
-**Requirements:**
-
-**Suggested Materials:**
-
-**Price:** $1100.00/Month
-
-**Suggested Software:**
-
-**Location:**
+**Location:** Onsite

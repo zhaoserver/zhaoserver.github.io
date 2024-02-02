@@ -1,6 +1,6 @@
 ---
 sort: 3
-title: Mr. EnochLiu
+title: Mr. Enoch
 type: teacher
 layout: course
 cover: medias/teacher/EnochLiu.png

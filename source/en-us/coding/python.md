@@ -1,7 +1,7 @@
 ---
 sort: 3
-name: Scratch
-title: Advanced Course
+name: Python
+title: Python
 type: coding
 layout: course
 cover: medias/coding/python/cover.png
@@ -13,7 +13,7 @@ time: 120
 unit: hr
 price: 40.00
 originalPrice: 69.99
-description: Advanced level mechanical principles and programming design
+description: Industry level programming - Structure and Interpretation of Computer Programs 
 labels:
 banners:
   - cover: medias/coding/python/banner/0.png
@@ -22,24 +22,16 @@ banners:
 
 ### What you can expect to learn
 
-Fully prepare for the VEX VRC Robotics Competition, delve into advanced mechanical principles and programming design, while concurrently enhancing your background in STEM disciplines.
+Embark on an exciting coding journey with our specially tailored Python Programming Course, designed specifically for middle school students and beyond. Explore the core principles of Python programming, utilizing it to unravel the structure and interpretation of computer programs. Immerse yourself in the intricacies of Python, fostering a genuine passion for coding and technology through hands-on, interactive experiences. This meticulously crafted program provides practical insights, encourages collaborative coding projects, and equips participants with essential programming skills. It establishes a strong foundation for ongoing exploration and success in the dynamic fields of computer science and STEM.
 
-**Instructor:** Mr. Sean
+**Age**: Middle School and Up
 
-**Time:**
+**Prerequisites**: None
 
-**Instructor:**
+**Level**: Medium - Hard
 
-**Focus:**
+**Time**: 2h/Week
 
-**Required education:**
+**Price**: $40.00/Hour
 
-**Requirements:**
-
-**Suggested Materials:**
-
-**Price:** $1100.00/Month
-
-**Suggested Software:**
-
-**Location:**
+**Location**: Remote/In Person

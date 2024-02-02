@@ -1,7 +1,7 @@
 ---
 sort: 1
 name: Scratch
-title: Scratch Coding Course
+title: Scratch
 type: coding
 layout: course
 cover: medias/coding/scratch/cover.png
@@ -9,11 +9,10 @@ cover: medias/coding/scratch/cover.png
 # teacher: Mr.Sean
 score: 5.0
 students: 89
-time: 120
 unit: hr
 price: 30.00
 originalPrice: 49.99
-description: Create animations, simple games, or interactive stories Learn event-driven coding
+description: Create animations, games, or interactive stories to learn event-driven coding
 labels:
   - Bestseller
 banners:
@@ -23,24 +22,16 @@ banners:
 
 ### What you can expect to learn
 
-Fully prepare for the VEX VRC Robotics Competition, delve into advanced mechanical principles and programming design, while concurrently enhancing your background in STEM disciplines.
+Join our Scratch Coding Course for an immersive coding experience suitable for learners of all ages. Gain a solid understanding of Scratch programming, allowing you to create interactive stories, games, and animations. Explore coding principles in-depth, fostering a genuine passion for computer science and technology through hands-on, engaging experiences. This meticulously designed program provides practical insights, encourages collaborative projects, and equips you with essential coding skills, establishing a robust foundation for continued exploration and success in the dynamic world of programming and STEM.
 
-**Instructor:** Mr. Sean
+**Age**: Any
 
-**Time:**
+**Requirements**: None
 
-**Instructor:**
+**Level**: Easy
 
-**Focus:**
+**Time**: 1h/Week
 
-**Required education:**
+**Price**: $30/Hour
 
-**Requirements:**
-
-**Suggested Materials:**
-
-**Price:** $1100.00/Month
-
-**Suggested Software:**
-
-**Location:**
+**Location**: Remote/In person

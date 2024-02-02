@@ -1,43 +1,35 @@
 ---
 sort: 1
-title: Foundational Robotics Course
+title: Intro to Robotic Engineering
 type: robotics
 layout: course
-name: Foundational Course
+name: Intro to Robotic Engineering
 cover: medias/robotics/foundational/cover.png
 # video: medias/courses/cover.jpg
-# teacher: Mr. Sean 
 score: 5.0
 students: 238
-time: 
+
 price: 398.00
 originalPrice: 499.99
-description: Elementary mechanical principles and programming design
+description: Intro to mechanical principles and programming design with VEX V5
 labels:
-  - Bestseller
+
 banners:
   - cover: medias/robotics/foundational/banner/0.png
 ---
 ### What you can expect to learn
 
-Gain preliminary knowledge of the VEX VRC Robotics Competition, delve into the intricacies of mechanical principles and programming design, all while actively fostering a keen interest in STEM disciplines.
 
-**Instructor:** Mr. Sean
+Anticipate a comprehensive learning journey where you'll gain foundational knowledge of the VEX VRC Robotics Competition. Dive into the intricacies of mechanical principles and programming design, actively fostering a keen interest in STEM disciplines through engaging, hands-on experiences. Our program aims to provide you with practical insights, collaborative projects, and essential technical skills, ensuring a strong foundation for continued exploration and success in the dynamic world of robotics and STEM.
 
-**Time:**
+**Age:** Any
 
-**Instructor:**
+**Requirements:** None
 
-**Focus:**
+**Level:** Easy
 
-**Required education:**
-
-**Requirements:**
-
-**Suggested Materials:**
+**Time:** 2h/Week
 
 **Price:** $398.00/Month
 
-**Suggested Software:**
-
-**Location:** Onsite
+**Location:** In Person
