@@ -11,15 +11,28 @@
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 10px;
-    border-bottom: 1px solid #eee;
     padding: 0 3px;
+    border-radius: 6px;
+    border: 1px solid #b9b6b6;
+    height: 60px;
+    padding: 0 10px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #FF7900;
+    }
   }
 
   .news-link {
     color: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .news-link:hover {
+    color: #FF7900;
     text-decoration: none;
   }
 
@@ -35,8 +48,8 @@
     <li class="news-item">
       <a href="<%- url_for(path) %>" class="news-link">
         <%= title %>
+        <span class="time"><%= date.format('YYYY-MM-DD HH:mm:ss') %></span>
       </a>
-      <span class="time"><%= date.format('YYYY-MM-DD HH:mm:ss') %></span>
     </li>
     <% }) %>
   </ul>

@@ -4,7 +4,7 @@ description: ''
 keywords:
 author: GP
 timezone: Asia/Shanghai
-language: :lang
+language: en-us
 default_language: en-us
 
 url: https://happykidsedu.com
@@ -12,13 +12,14 @@ permalink: :title/
 default_layout: normal
 pretty_urls:
   trailing_index: true
-  trailing_html: true 
+  trailing_html: true
 
 theme: happy
 logo: medias/logo.png
 favicon: medias/favicon.png
 email: happykidsrobotics@gmail.com
 analytics: G-KF8YWG23XX
+register: https://docs.google.com/forms/d/e/1FAIpQLSdcHt47Yk35Q-jKQ55DzaJEiuG9hnh6JuoEvGpV-uLTMTkzrw/viewform?usp=sf_link
 menus:
   - name: Index
     url: /

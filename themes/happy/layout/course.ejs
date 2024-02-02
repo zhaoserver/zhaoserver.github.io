@@ -36,7 +36,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    background: #D9D9D9;
+    /* background: #D9D9D9; */
   }
 
   .info-content {
@@ -126,9 +126,9 @@
           <h2 class="name"><%= page.name %></h2>
           <span class="teacher"><%= page.teacher %></span>
           <p class="desc"><%= page.description %></p>
-          <span class="time">time: <%= page.time %></span>
+          <!-- <span class="time">time: <%= page.time %></span> -->
         </div>
-        <a class="register" target="_blank" href="<%=page.register%>">Register</a>
+        <a class="register" target="_blank" href="<%=page.register ?? config.register%>">Register</a>
       </div>
     </div>
     </div>
