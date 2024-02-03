@@ -5,7 +5,8 @@ type: index
 layout: index
 filter: courses
 banners:
-  - title: SPRING 2024 REGISTRATION IS OPEN!
-    cover: medias/index/0.png
+  - cover: medias/index/0.png
+  - cover: medias/index/1.png
+  - cover: medias/index/2.png
 ---
 

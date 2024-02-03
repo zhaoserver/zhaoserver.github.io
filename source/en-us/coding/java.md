@@ -16,7 +16,7 @@ originalPrice: 79.99
 description: Industry level programming - Data Structure and Object Oriented Programming
 labels:
 banners:
-  - cover: medias/coding/python/java/0.png
+  - cover: medias/coding/java/banner/0.png
 ---
 
 

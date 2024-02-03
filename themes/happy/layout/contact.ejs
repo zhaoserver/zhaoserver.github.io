@@ -1,0 +1,40 @@
+<style>
+  .content {
+    gap: 50px 80px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
+
+  .content label {
+    font-size: 23px;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  .content div {
+    padding-top: 10px;
+    color: #989898;
+  }
+
+  .content a {
+    color: #989898;
+  }
+</style>
+<main class="container">
+  <%- partial('_widget/carousel', {id: 'carousel', list: page.banners}) %>
+  <div class="mt30 content">
+    <label>Address</label>
+    <div>
+      <%-page.address%><br><br>
+      <img src="<%= url_for(page.map) %>" width="447" height="320" alt="map">
+    </div>
+    <label>Phone</label>
+    <div><a href="tel:<%=page.phone%>"><%=page.phone%></a></div>
+    <label>E-mail</label>
+    <div><a href="mailto:<%=page.email%>"><%=page.email%></a></div>
+    <label>WeChat</label>
+    <div>
+      <img src="<%= url_for(page.qrcode) %>" width="180" height="180" alt="qrcode">
+    </div>
+  </div>
+</main>

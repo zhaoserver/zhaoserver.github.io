@@ -12,6 +12,7 @@ entries:
   - Swift planning of competition strategies
 banners:
   - cover: medias/robotics/banner/0.png
+  - cover: medias/robotics/banner/1.png
 ---
 
 Welcome to the VEX Robotics Class at Happy Kids Robotics, where we spark the curiosity of students spanning from elementary to high school, leading them on an exciting adventure into the dynamic world of robotics. Our meticulously crafted program is designed to instill a profound passion for teamwork, cultivate innovative thinking, and nurture problem-solving skills, offering students an engaging platform to apply scientific and engineering principles. Embracing a project-oriented approach, VEX Robotics holds widespread acknowledgment from prestigious universities, amplifying its value as a comprehensive educational experience.
