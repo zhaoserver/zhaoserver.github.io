@@ -32,6 +32,6 @@ Embark on an exciting coding journey with our specially tailored Java Programmin
 
 **Time**: 2h/Week
 
-**Price**: $40.00/Hour
+**Price**: $45.00/Hour
 
 **Location**: Remote/In Person
