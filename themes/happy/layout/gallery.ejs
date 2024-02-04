@@ -17,6 +17,7 @@
   .cover {
     width: 100%;
     border-radius: 6px;
+    cursor: pointer;
   }
 
   .modal-dialog {
@@ -55,22 +56,25 @@
       columns.each(function (index) {
         columnHeights[index] = $(this).height();
       });
-      console.log(columnHeights);
     }
     function findShortestColumn() {
       var shortestHeight = Math.min.apply(null, columnHeights);
       return columnHeights.indexOf(shortestHeight);
     }
     $.each(images, function (k, img) {
-      var shortestColumnIndex = findShortestColumn();
-      $('.column').eq(shortestColumnIndex).append(img);
-      updateColumnHeights();
-    });
-    $('.cover').click(function () {
-      var src = $(this).attr('src');
-      console.log(src)
-      $('#previewImage').attr('src', src);
-      $('#modal').modal('show');
+      $(img).on('load', function() {
+        var shortestColumnIndex = findShortestColumn();
+        $('.column').eq(shortestColumnIndex).append(this);
+        updateColumnHeights();
+
+        $(this).addClass('animated fadeIn')
+        $(this).click(function () {
+          var src = $(this).attr('src');
+          console.log(src)
+          $('#previewImage').attr('src', src);
+          $('#modal').modal('show');
+        });
+      })
     });
   });
 </script>
