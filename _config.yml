@@ -7,7 +7,7 @@ timezone: Asia/Shanghai
 language: en-us
 default_language: en-us
 
-url: https://happykidsedu.com
+url: https://zhaoserver.github.io
 permalink: :title/
 default_layout: normal
 pretty_urls:
